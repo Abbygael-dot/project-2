@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=" utf-8"/>
+        <meta htstp-equiv="X-UA- Compatible" content ="IE=edge"/>
+
+        <meta name= "viewport" content = "width=device-width, initial-scale =1+">
+       
+      <title>EHC project 2</title>
+      <link rel="stylesheet" href="icon/icofont.min.css">
+      <link rel = "stylesheet" type = "text/css" href = "project.css">
+    </head>
+
+    <nav class ="links">
+          
+        
+            <a href="project.html" a> home</a></br>
+            <a href="cont.html" a>order</a></br>
+            <a href="contact.html" a>contact</a></br>
+            <a href="blog.html" a>blog</a></br>
+        
+        
+    
+          
+        
+    </nav>
+    <body>
+        <div class ="fimage">
+    <h1 id="heading"> <span >D</span>eli<span>f</span>oods</h1>
+    <label for ="speed">speed</label>
+            <input type = "number" name ="speed" id ="speed" value="5" min="1" max="40" step="1"> 
+            <h2>every recipe made with love</h2>
+        </div>
+        <div class = "imagetext">
+
+            <img src= "foto/rest.png" width="600px" height="600px">
+            <p>
+                delifoods resturant.Nigeria's best, every recipe made with love. we connect friends and family.<br>
+                #opp total fueling station wuse2 abuja
+
+             </p>
+
+        </div>
+        
+        <footer class="footer">
+            <p> &copy;delifoods resturants........ </p>
+
+        </footer>
+    </div>
+    <script type ="text/javascript">
+        const textheading = document.getElementById('heading' )
+        
+        const textspeed = document.getElementById('speed' )
+        const text = "DELIFOODS RESTURANT...."
+
+      //  textheading.innerHTML = text
+      let idx = 1
+      let speed = 600 / textspeed.value
+      writeText()
+      function writeText(){
+          textheading.innerText = text.slice(0, idx)
+          idx++
+          if (idx > text.lenght){
+              idx = 1
+          }
+          setTimeout(writeText, speed)
+
+      }
+      textspeed.addEventListner('input', (e)=> speed = 600 / e.target.value)
+
+
+    </script>
+    </body>
+
+</html>
